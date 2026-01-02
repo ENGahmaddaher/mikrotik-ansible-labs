@@ -1,0 +1,15 @@
+- name: Confuigure Core Router 
+  hosts: core
+  gather_facts: no
+  roles:
+   - core
+- name: Confuigure Access Router
+  hosts: access
+  gather_facts: no
+  roles:
+   - access
+- name: Confuigure PPPoe clients
+  hosts: clients
+  gather_facts: no
+  roles:
+   - client

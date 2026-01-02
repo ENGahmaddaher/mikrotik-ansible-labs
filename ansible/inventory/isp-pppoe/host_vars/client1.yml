@@ -1,0 +1,3 @@
+ansible_user: 192.168.2.2
+pppoe_username: user1
+pppoe_password: pass1

@@ -1,0 +1,4 @@
+- name: Configure PPPoe client
+  community.routeros.command:
+    commands:
+     - /interface pppoe-client add interface="{{ pppoe_interface }}" user="{{ pppoe_username }}" password="{{ pppoe_password }}" add-default-route="{{ pppoe_add_default_route }}" disabled=no

@@ -1,0 +1,2 @@
+pppoe_interface: ether1
+pppoe_add_default_route: yes

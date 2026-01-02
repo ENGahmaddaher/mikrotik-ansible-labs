@@ -1,0 +1,9 @@
+- name: Set default Route
+  community.routeros.command:
+    commands:
+     - /ip route add dst-address=0.0.0.0/0 gateway="{{ default_gateway }}"
+- name: Enable Nat
+  community.routeros.command:
+    commands:
+     - /ip firewall nat add chain=srcnat out-interface="{{ wan_interface }}" action=masquerade
+
