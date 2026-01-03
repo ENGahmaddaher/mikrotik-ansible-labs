@@ -1,3 +1,4 @@
-- name: Configure PPPoe servers per interface
+---
+- name: Configure PPPoE servers on Access Router
   community.routeros.command:
-    commands: "{{ lookup('template','pppoe-servers.j2') | split('\n') }}"
+    commands: "{{ lookup('template', 'pppoe-servers.j2').splitlines() }}"

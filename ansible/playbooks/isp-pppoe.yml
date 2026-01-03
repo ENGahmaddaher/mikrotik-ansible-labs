@@ -1,15 +1,18 @@
-- name: Confuigure Core Router 
+---
+- name: Configure Core Router
   hosts: core
   gather_facts: no
   roles:
-   - core
-- name: Confuigure Access Router
+    - core
+
+- name: Configure Access Router (PPPoE servers)
   hosts: access
   gather_facts: no
   roles:
-   - access
-- name: Confuigure PPPoe clients
+    - access
+
+- name: Configure PPPoE Clients
   hosts: clients
   gather_facts: no
   roles:
-   - client
+    - client

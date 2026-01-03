@@ -1,0 +1,14 @@
+pppoe_servers:
+  - name: pppoe-client1
+    interface: ether2
+    pool: pool-client1
+    range: 10.10.1.10-10.10.1.20
+    profile: profile-client1
+    rate_limit: 5M/1M
+
+  - name: pppoe-client2
+    interface: ether3
+    pool: pool-client2
+    range: 10.10.2.10-10.10.2.20
+    profile: profile-client2
+    rate_limit: 10M/2M

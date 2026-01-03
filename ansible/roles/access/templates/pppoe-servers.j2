@@ -1,10 +1,5 @@
 {% for s in pppoe_servers %}
 /ip pool add name={{ s.pool }} ranges={{ s.range }}
 /ppp profile add name={{ s.profile }} remote-address={{ s.pool }} rate-limit={{ s.rate_limit }}
-/interface pppoe-server add \
-  name={{ s.name }} \
-  interface={{ s.interface }} \
-  service-name={{ s.name }} \
-  default-profile={{ s.profile }} \
-  max-mtu=1492 max-mru=1492
+/interface pppoe-server add name={{ s.name }} interface={{ s.interface }} service-name={{ s.name }} default-profile={{ s.profile }} max-mtu=1492 max-mru=1492
 {% endfor %}
